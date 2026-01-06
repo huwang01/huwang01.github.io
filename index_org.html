@@ -1,260 +1,149 @@
-<!doctype html>
-<html lang="en">
+
+<html>
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Hu Wang</title>
 	<meta content="Hu Wang, huwang01.github.io" name="keywords" />
-	<style type="text/css">
-/* ===== Modern, clean academic homepage styling (content unchanged) ===== */
-:root{
-  --bg:#f6f7fb;
-  --card:#ffffff;
-  --text:#111827;
-  --muted:#4b5563;
-  --border:rgba(17,24,39,.10);
-  --accent:#1d4ed8;
-  --accentHover:#b45309;
-  --shadow:0 10px 25px rgba(17,24,39,.08);
-  --radius:14px;
-  --maxw:1060px;
-  --topbarBg:rgba(246,247,251,.82);
+	<style media="screen" type="text/css">html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0pt none;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0pt;
+  outline-color: invert;
+  outline-style: none;
+  outline-width: 0pt;
+  padding: 0pt;
+  vertical-align: baseline;
 }
 
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#0b1220;
-    --card:#0f172a;
-    --text:#e5e7eb;
-    --muted:#9ca3af;
-    --border:rgba(229,231,235,.14);
-    --accent:#60a5fa;
-    --accentHover:#fbbf24;
-    --shadow:0 18px 40px rgba(0,0,0,.35);
-    --topbarBg:rgba(11,18,32,.78);
-  }
-}
-
-*{ box-sizing:border-box; }
-
-html{
-  scroll-behavior:smooth;
-  scroll-padding-top:88px; /* offset for sticky nav */
-}
-
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:"Lato", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-  font-size:16px;
-  line-height:1.65;
-}
-
-img{ max-width:100%; height:auto; }
-
-a{
-  color:var(--accent);
+a {
+  color: #1772d0;
   text-decoration:none;
-  text-underline-offset:3px;
 }
 
-a:hover, a:focus{
-  color:var(--accentHover);
-  text-decoration:underline;
-}
-
-.page{
-  max-width:var(--maxw);
-  margin:18px auto 54px;
-  padding:0 18px;
-}
-
-.topbar{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:var(--topbarBg);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--border);
-}
-
-.nav{
-  max-width:var(--maxw);
-  margin:0 auto;
-  padding:10px 18px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px 14px;
-  justify-content:center;
-}
-
-.nav a{
-  display:inline-flex;
-  align-items:center;
-  padding:8px 10px;
-  border-radius:10px;
-  font-weight:700;
-  font-size:14px;
-  color:var(--accent);
-}
-
-.nav a:hover, .nav a:focus{
+a:focus, a:hover {
+  color: #f09228;
   text-decoration:none;
-  background:rgba(29,78,216,.10);
 }
 
-@media (prefers-color-scheme: dark){
-  .nav a:hover, .nav a:focus{ background:rgba(96,165,250,.12); }
+a.paper {
+  font-weight: bold;
+  font-size: 12pt;
 }
 
-.card, div.paper{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
+b.paper {
+  font-weight: bold;
+  font-size: 12pt;
 }
 
-.hero{
-  margin-top:18px;
-  padding:18px;
-  display:flex;
-  gap:18px;
-  align-items:flex-start;
+* {
+  margin: 0pt;
+  padding: 0pt;
 }
 
-.avatar{
-  width:170px;
-  height:170px;
-  object-fit:cover;
-  border-radius:14px;
-  border:1px solid var(--border);
-  box-shadow:0 12px 26px rgba(0,0,0,.16);
-  flex:0 0 auto;
+body {
+  position: relative;
+  margin: 3em auto 2em auto;
+  width: 65%;
+  font-family: Lato, Verdana, Helvetica, sans-serif;
+  font-size: 16px;
+  background: #eee;
 }
 
-.hero h1{
-  margin:0 0 10px;
-  font-size:34px;
-  line-height:1.12;
-  letter-spacing:.2px;
-  font-weight:900;
+h2 {
+  font-family: Lato, Verdana, Helvetica, sans-serif;
+  font-size: 16pt;
+  font-weight: 700;
 }
 
-.hero p{
-  margin:0;
+h3 {
+  font-family: Lato, Verdana, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
 }
 
-.hero .lead{
-  color:var(--text);
+strong {
+  font-family: Lato, Verdana, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight:bold;
 }
 
-@media (max-width:720px){
-  .hero{ flex-direction:column; }
-  .avatar{ width:140px; height:140px; }
-  .hero h1{ font-size:28px; }
+ul { 
+  list-style: circle;
 }
 
-.section{
-  margin-top:26px;
+img {
+  border: none;
 }
 
-.section h2{
-  margin:0 0 12px;
-  font-size:20px;
-  font-weight:900;
-  letter-spacing:.2px;
+li {
+  padding-bottom: 0.5em;
+  margin-left: 1.4em;
 }
 
-.section h2 a{ font-weight:900; }
-
-.section .paper{
-  padding:16px;
+alert {
+  font-family: Lato, Verdana, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #FF0000;
 }
 
-ul{
-  margin:0;
-  padding-left:1.15em;
+em, i {
+	font-style:italic;
 }
 
-li{
-  margin:0 0 .55em;
+div.section {
+  clear: both;
+  margin-bottom: 1.5em;
+  background: #eee;
 }
 
-div.paper + div.paper{
-  margin-top:14px;
+div.spanner {
+  clear: both;
 }
 
-/* Publication cards (same content, nicer layout) */
-div.paper.pub-item{
-  padding:16px;
-  display:grid;
-  grid-template-columns:180px 1fr;
-  gap:16px;
-  align-items:start;
+div.paper {
+  clear: both;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 1em 1em 1em 1em;
 }
 
-div.paper.pub-item img.paper{
-  width:180px;
-  margin:0;
-  border-radius:12px;
-  border:1px solid var(--border);
-  box-shadow:0 10px 22px rgba(0,0,0,.12);
+div.paper div {
+  padding-left: 230px;
 }
 
-div.paper.pub-item > div{
-  padding:0 !important; /* override old template padding */
+img.paper {
+  margin-bottom: 0.5em;
+  float: left;
+  width: 200px;
 }
 
-div.paper.pub-item .spanner{
-  display:none;
+span.blurb {
+  font-style:italic;
+  display:block;
+  margin-top:0.75em;
+  margin-bottom:0.5em;
 }
 
-@media (max-width:720px){
-  div.paper.pub-item{
-    grid-template-columns:1fr;
-  }
-  div.paper.pub-item img.paper{
-    width:100%;
-    max-width:520px;
-  }
+pre, code {
+  font-family: 'Lucida Console', 'Andale Mono', 'Courier', monospaced;
+  margin: 1em 0;
+  padding: 0;
 }
 
-/* Better readability for long lists */
-.paper ul p{
-  margin:0 0 .65em;
+div.paper pre {
+  font-size: 0.9em;
 }
-
-/* Footer */
-.footer{
-  margin-top:30px;
-  text-align:right;
-  color:var(--muted);
-  font-size:14px;
-}
-
-hr{
-  border:none;
-  border-top:1px solid var(--border);
-  margin:26px 0;
-}
-
-.divcss5{
-  margin:0 auto;
-  width:300px;
-  height:200px;
-  border-radius:var(--radius);
-  overflow:hidden;
-  border:1px solid var(--border);
-  box-shadow:var(--shadow);
-  background:var(--card);
-}
-
+		
+div.divcss5{ margin: auto; width:300px; height:200px}
 </style>
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&display=swap" rel="stylesheet" type="text/css" /><!--<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>--><!--<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>--><!--<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>-->
+<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" /><!--<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>--><!--<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>--><!--<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>-->
 </head>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -276,29 +165,27 @@ hr{
 
 </script>
 <body>
-<header class="topbar">
-  <nav class="nav" aria-label="Primary">
-    <a href="#news">News</a>
-    <a href="#services">Services</a>
-    <a href="#awards">Awards</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#supervision">Supervision</a>
-    <a href="#books">Books</a>
-    <a href="#tutorials">Online Tutorials</a>
-    <a href="#selected-publications">Selected Publications</a>
-    <a href="#patents">Patents</a>
-  </nav>
-</header>
+<div style="background-color: #fff; border: 1px solid #ddd; padding: 10px; text-align: center; margin-bottom: 20px;">
+  <a style="margin: 0 10px; text-decoration: none; color: #1772d0;" href="#news">News</a>
+  <a style="margin: 0 10px; text-decoration: none; color: #1772d0;" href="#services">Services</a>
+  <a style="margin: 0 10px; text-decoration: none; color: #1772d0;" href="#awards">Awards</a>
+  <a style="margin: 0 10px; text-decoration: none; color: #1772d0;" href="#teaching">Teaching</a>
+  <a style="margin: 0 10px; text-decoration: none; color: #1772d0;" href="#supervision">Supervision</a>
+  <a style="margin: 0 10px; text-decoration: none; color: #1772d0;" href="#books">Books</a>
+  <a style="margin: 0 10px; text-decoration: none; color: #1772d0;" href="#tutorials">Online Tutorials</a>
+  <a style="margin: 0 10px; text-decoration: none; color: #1772d0;" href="#selected-publications">Selected Publications</a>
+  <a style="margin: 0 10px; text-decoration: none; color: #1772d0;" href="#patents">Patents</a>
+</div>
 
-<div class="page">
-<section class="hero card">
-  <img class="avatar" title="Hu Wang" src="huwang-casual2.jpg" alt="Hu Wang" />
-  <div>
-    <h1>Hu Wang</h1>
-    <p class="lead">I am a research scientist working with Prof. <a href='https://mbzuai.ac.ae/study/faculty/mohammad-yaqub/'>Mohammad Yaqub</a> at MBZUAI (Ranked <a href='https://csrankings.org/#/index?ai&vision&mlmining&nlp&world'>11th</a> in AI globally). Previously, I worked as a research fellow at <a href='https://www.adelaide.edu.au/aiml/'>AIML</a>, Adelaide University with Prof. <a href='https://cs.adelaide.edu.au/~carneiro/'>Gustavo Carneiro</a>. I received my Ph.D. degree advised by Prof. <a href='https://cshen.github.io/'>Chunhua Shen</a> and Prof. <a href='http://www.qi-wu.me/'>Qi Wu</a> at Adelaide University. Before that, I worked with Prof. <a href='https://sites.google.com/view/stevenhoi/home'>Steven Hoi</a> (the author of BLIP and BLIP2) on at <a href='https://larc.smu.edu.sg/'>LARC</a> cofounded by SMU and CMU. Our <a href='https://imagendo.org.au/'>Imagendo</a> work was awarded the <a href='https://australian.museum/get-involved/eureka-prizes/2023-eureka-prize-winners/'>Eureka Prize</a> (Australia premier national science award).</p>
-  </div>
-</section>
-
+	
+<div style="margin-bottom: 1em; border: 1px solid #ddd; background-color: #fff; padding: 1em; height: 220px;">
+<div style="margin: 0px auto; width: 100%;">
+<img title="Hu Wang" style="float: left; padding-left: .01em; height: 210px;" src="huwang-casual2.jpg" />
+<div style="padding-left: 12em; vertical-align: top; height: 120px;"><span style="line-height: 150%; font-size: 20pt;">Hu Wang</span><br />
+<span>I am a research scientist working with Prof. <a href='https://mbzuai.ac.ae/study/faculty/mohammad-yaqub/'>Mohammad Yaqub</a> at MBZUAI (Ranked <a href='https://csrankings.org/#/index?ai&vision&mlmining&nlp&world'>11th</a> in AI globally). Previously, I worked as a research fellow at <a href='https://www.adelaide.edu.au/aiml/'>AIML</a>, Adelaide University with Prof. <a href='https://cs.adelaide.edu.au/~carneiro/'>Gustavo Carneiro</a>. I received my Ph.D. degree advised by Prof. <a href='https://cshen.github.io/'>Chunhua Shen</a> and Prof. <a href='http://www.qi-wu.me/'>Qi Wu</a> at Adelaide University. Before that, I worked with Prof. <a href='https://sites.google.com/view/stevenhoi/home'>Steven Hoi</a> (the author of BLIP and BLIP2) on at <a href='https://larc.smu.edu.sg/'>LARC</a> cofounded by SMU and CMU. Our <a href='https://imagendo.org.au/'>Imagendo</a> work was awarded the <a href='https://australian.museum/get-involved/eureka-prizes/2023-eureka-prize-winners/'>Eureka Prize</a> (Australia premier national science award).</span>
+</div>
+</div>
+</div>
 <!--<div style="clear: both; background-color: #fff; margin-top: 1.5em; padding: .2em; padding-left: .3em;">-->
 
 	
@@ -476,7 +363,7 @@ hr{
 <div class="section">
 <h2 id="selected-publications">Selected Publications</h2>
 
-<div class="paper pub-item" id="krpo"><img class="paper" src="papers/krpo.png" title="Kalman Filter Enhanced GRPO for Reinforcement Learning-Based Language Model Reasoning" />
+<div class="paper" id="krpo"><img class="paper" src="papers/krpo.png" title="Kalman Filter Enhanced GRPO for Reinforcement Learning-Based Language Model Reasoning" />
 <div> <strong>Kalman Filter Enhanced GRPO for Reinforcement Learning-Based Language Model Reasoning</strong><br />
 <strong>H Wang</strong>, C Ma, I Reid, M Yaqub <br />
 In submission <br/>
@@ -486,7 +373,7 @@ In submission <br/>
 <div class="spanner"></div>
 </div>
 
-<div class="paper pub-item" id="inm"><img class="paper" src="papers/inm.png" title="In-Model Merging for Enhancing the Robustness of Medical Imaging Classification Models" />
+<div class="paper" id="inm"><img class="paper" src="papers/inm.png" title="In-Model Merging for Enhancing the Robustness of Medical Imaging Classification Models" />
 <div> <strong>In-Model Merging for Enhancing the Robustness of Medical Imaging Classification Models</strong><br />
 <strong>H Wang</strong>, I Almakky, C Ma, N Saeed, M Yaqub <br />
 The British Machine Vision Conference 2025 (<strong>BMVC 2025</strong>) <br/>
@@ -496,7 +383,7 @@ The British Machine Vision Conference 2025 (<strong>BMVC 2025</strong>) <br/>
 <div class="spanner"></div>
 </div>
 
-<div class="paper pub-item" id="metakd"><img class="paper" src="papers/metakd.png" title="Meta-Learned Modality-Weighted Knowledge Distillation for Robust Multi-Modal Learning with Missing Data" />
+<div class="paper" id="metakd"><img class="paper" src="papers/metakd.png" title="Meta-Learned Modality-Weighted Knowledge Distillation for Robust Multi-Modal Learning with Missing Data" />
 <div> <strong>Meta-Learned Modality-Weighted Knowledge Distillation for Robust Multi-Modal Learning with Missing Data</strong><br />
 <strong>H Wang</strong>, S Hassan, Y Liu, C Ma, Y Chen, Q Li, J Geng, B Wang, Y Tian, Y Xie, J Avery, L Hull, I Reid, M Yaqub, G Carneiro <br />
 In submission <br/>
@@ -506,7 +393,7 @@ In submission <br/>
 <div class="spanner"></div>
 </div>
 
-<div class="paper pub-item" id="rethinkmerge"><img class="paper" src="papers/rethinkmerge.png" title="Rethinking Weight-Averaged Model-merging" />
+<div class="paper" id="rethinkmerge"><img class="paper" src="papers/rethinkmerge.png" title="Rethinking Weight-Averaged Model-merging" />
 <div> <strong>Rethinking Weight-Averaged Model-merging</strong><br />
 <strong>H Wang</strong>, C Ma, I Almakky, I Reid, G Carneiro, M Yaqub <br />
 In submission <br/>
@@ -516,7 +403,7 @@ In submission <br/>
 <div class="spanner"></div>
 </div>
 
-<div class="paper pub-item" id="shaspec"><img class="paper" src="papers/shaspec.png" title="Multi-modal Learning with Missing Modality via Shared-Specific Feature Modelling" />
+<div class="paper" id="shaspec"><img class="paper" src="papers/shaspec.png" title="Multi-modal Learning with Missing Modality via Shared-Specific Feature Modelling" />
 <div> <strong>Multi-modal Learning with Missing Modality via Shared-Specific Feature Modelling</strong><br />
 <strong>H Wang</strong>, Y Chen, C Ma, J Avery, L Hull, G Carneiro <br />
 Computer Vision and Pattern Recognition 2023 (<strong>CVPR 2023</strong>) <br />
@@ -526,7 +413,7 @@ Computer Vision and Pattern Recognition 2023 (<strong>CVPR 2023</strong>) <br />
 <div class="spanner"></div>
 </div>
 	
-<div class="paper pub-item" id="lckd"><img class="paper" src="papers/lckd.jpg" title="Learnable Cross-modal Knowledge Distillation for Multi-modal Learning with Missing Modality" />
+<div class="paper" id="lckd"><img class="paper" src="papers/lckd.jpg" title="Learnable Cross-modal Knowledge Distillation for Multi-modal Learning with Missing Modality" />
 <div> <strong>Learnable Cross-modal Knowledge Distillation for Multi-modal Learning with Missing Modality</strong><br />
 <strong>H Wang</strong>, C Ma, J Zhang, Y Zhang, J Avery, L Hull, G Carneiro <br />
 Medical Image Computing and Computer-Assisted Intervention 2023 (<strong>MICCAI 2023</strong>) <br />
@@ -536,7 +423,7 @@ Medical Image Computing and Computer-Assisted Intervention 2023 (<strong>MICCAI 
 <div class="spanner"></div>
 </div>
 	
-<div class="paper pub-item" id="crnp"><img class="paper" src="papers/crnp.png" title="Uncertainty-aware Multi-modal Learning via Cross-modal Random Network Prediction" />
+<div class="paper" id="crnp"><img class="paper" src="papers/crnp.png" title="Uncertainty-aware Multi-modal Learning via Cross-modal Random Network Prediction" />
 <div> <strong>Uncertainty-aware Multi-modal Learning via Cross-modal Random Network Prediction</strong><br />
 <strong>H Wang</strong>, J Zhang, Y Chen, C Ma, J Avery, L Hull, G Carneiro <br />
 European Conference on Computer Vision 2022 (<strong>ECCV 2022</strong>) <br />
@@ -544,10 +431,11 @@ European Conference on Computer Vision 2022 (<strong>ECCV 2022</strong>) <br />
 <a href='https://github.com/billhhh/CRNP'>[Code]</a> <br />
 Code is publicly available now!
 </div>
+</div>
 <div class="spanner"></div>
 </div>
 
-<div class="paper pub-item" id="sr-quant"><img class="paper" src="papers/sr-quant.png" title="Fully Quantized Image Super-Resolution Networks" />
+<div class="paper" id="sr-quant"><img class="paper" src="papers/sr-quant.png" title="Fully Quantized Image Super-Resolution Networks" />
 <div> <strong>Fully Quantized Image Super-Resolution Networks</strong><br />
 <strong>H Wang</strong>, P Chen, B Zhuang, C Shen <br />
 ACM Multimedia 2021 (<strong>ACMMM 2021</strong>) <br />
@@ -557,7 +445,7 @@ ACM Multimedia 2021 (<strong>ACMMM 2021</strong>) <br />
 <div class="spanner"></div>
 </div>
 	
-<div class="paper pub-item" id="rdp"><img class="paper" src="papers/rdp.png" title="Unsupervised Representation Learning by Predicting Random Distances" />
+<div class="paper" id="rdp"><img class="paper" src="papers/rdp.png" title="Unsupervised Representation Learning by Predicting Random Distances" />
 <div> <strong>Unsupervised Representation Learning by Predicting Random Distances</strong><br />
 <strong>H Wang</strong>, G Pang, C Shen, C Ma <br />
 International Joint Conference on Artificial Intelligence 2021 (<strong>IJCAI 2020</strong>) <br />
@@ -567,7 +455,7 @@ International Joint Conference on Artificial Intelligence 2021 (<strong>IJCAI 20
 <div class="spanner"></div>
 </div>
 
-<div class="paper pub-item" id="serl"><img class="paper" src="papers/serl.png" title="Soft expert reward learning for vision-and-language navigation" />
+<div class="paper" id="serl"><img class="paper" src="papers/serl.png" title="Soft expert reward learning for vision-and-language navigation" />
 <div> <strong>Soft expert reward learning for vision-and-language navigation</strong><br />
 <strong>H Wang</strong>, Q Wu, C Shen <br />
 European Conference on Computer Vision 2020 (<strong>ECCV 2020</strong>) <br />
@@ -577,7 +465,7 @@ European Conference on Computer Vision 2020 (<strong>ECCV 2020</strong>) <br />
 <div class="spanner"></div>
 </div>
 
-<div class="paper pub-item" id="iga"><img class="paper" src="papers/iga.png" title="Robust Watermarking Using Inverse Gradient Attention" />
+<div class="paper" id="iga"><img class="paper" src="papers/iga.png" title="Robust Watermarking Using Inverse Gradient Attention" />
 <div> <strong>Robust Watermarking Using Inverse Gradient Attention</strong><br />
 H Zhang*, <strong>H Wang*</strong>, Y Li, Y Cao, C Shen <br />
 International Journal of Intelligent Systems (<strong>IJIS</strong>) <br />
@@ -587,7 +475,7 @@ International Journal of Intelligent Systems (<strong>IJIS</strong>) <br />
 <div class="spanner"></div>
 </div>
 	
-<div class="paper pub-item" id="traffic"><img class="paper" src="papers/traffic.png" title="Multi-intersection Traffic Optimisation: A Benchmark Dataset and a Strong Baseline" />
+<div class="paper" id="traffic"><img class="paper" src="papers/traffic.png" title="Multi-intersection Traffic Optimisation: A Benchmark Dataset and a Strong Baseline" />
 <div> <strong>Multi-intersection Traffic Optimisation: A Benchmark Dataset and a Strong Baseline</strong><br />
 <strong>H Wang</strong>, H Chen, Q Wu, C Ma, Y Li, C Shen <br />
 IEEE Open Journal of Intelligent Transportation System (<strong>OJ-ITS</strong>) <br />
@@ -597,7 +485,7 @@ IEEE Open Journal of Intelligent Transportation System (<strong>OJ-ITS</strong>)
 <div class="spanner"></div>
 </div>
 	
-<div class="paper pub-item" id="kasr"><img class="paper" src="papers/kasr.png" title="Kernel Agnostic Real-world Image Super-resolution" />
+<div class="paper" id="kasr"><img class="paper" src="papers/kasr.png" title="Kernel Agnostic Real-world Image Super-resolution" />
 <div> <strong>Kernel Adversarial Learning for Real-world Image Super-resolution</strong><br />
 <strong>H Wang</strong>, C Ma, J Zhang, W Zhang, G Carneiro <br />
 <a href='https://arxiv.org/abs/2104.09008'>[PDF]</a>
@@ -606,7 +494,7 @@ IEEE Open Journal of Intelligent Transportation System (<strong>OJ-ITS</strong>)
 <div class="spanner"></div>
 </div>
 	
-<div class="paper pub-item" id="mdsumm"><img class="paper" src="papers/mdsumm.png" title="Multi-document Summarization via Deep Learning Techniques: A Survey" />
+<div class="paper" id="mdsumm"><img class="paper" src="papers/mdsumm.png" title="Multi-document Summarization via Deep Learning Techniques: A Survey" />
 <div> <strong>Multi-document Summarization via Deep Learning Techniques: A Survey</strong><br />
 C Ma, WE Zhang, M Guo, <strong>H Wang</strong>, QZ Sheng <br />
 <strong>ACM Computing Survey</strong> <br />
@@ -615,7 +503,7 @@ C Ma, WE Zhang, M Guo, <strong>H Wang</strong>, QZ Sheng <br />
 <div class="spanner"></div>
 </div>
 	
-<div class="paper pub-item" id="data-hiding-survey"><img class="paper" src="papers/data-hiding-survey.png" title="Data Hiding with Deep Learning: A Survey Unifying Digital Watermarking and Steganography" />
+<div class="paper" id="data-hiding-survey"><img class="paper" src="papers/data-hiding-survey.png" title="Data Hiding with Deep Learning: A Survey Unifying Digital Watermarking and Steganography" />
 <div> <strong>Data Hiding with Deep Learning: A Survey Unifying Digital Watermarking and Steganography</strong><br />
 Z Wang, O Byrnes, <strong>H Wang</strong>, R Sun, C Ma, H Chen, Q Wu, M Xue <br />
 IEEE Transactions on Computational Social Systems (<strong>TCSS</strong>) <br />
@@ -624,7 +512,7 @@ IEEE Transactions on Computational Social Systems (<strong>TCSS</strong>) <br />
 <div class="spanner"></div>
 </div>
 
-<div class="paper pub-item" id="sbv"><img class="paper" src="papers/sbv.png" title="Segment Beyond View: Handling Partially Missing Modality for Audio-Visual Semantic Segmentation" />
+<div class="paper" id="sbv"><img class="paper" src="papers/sbv.png" title="Segment Beyond View: Handling Partially Missing Modality for Audio-Visual Semantic Segmentation" />
 <div> <strong>Segment Beyond View: Handling Partially Missing Modality for Audio-Visual Semantic Segmentation</strong><br />
 R Wu, <strong>H Wang</strong>, F Dayoub, H Chen <br />
 Association for the Advancement of Artificial Intelligence 2024 (<strong>AAAI 2024</strong>) <br />
@@ -634,7 +522,7 @@ Association for the Advancement of Artificial Intelligence 2024 (<strong>AAAI 20
 <div class="spanner"></div>
 </div>
 
-<div class="paper pub-item" id="m4i"><img class="paper" src="papers/m4i.png" title="M4I: Multi-modal Models Membership Inference" />
+<div class="paper" id="m4i"><img class="paper" src="papers/m4i.png" title="M4I: Multi-modal Models Membership Inference" />
 <div> <strong>M4I: Multi-modal Models Membership Inference</strong><br />
 P Hu, Z Wang, R Sun, <strong>H Wang</strong>, M Xue <br />
 Neural Information Processing Systems 2022 (<strong>NeurIPS 2022</strong>) <br />
@@ -644,7 +532,7 @@ Neural Information Processing Systems 2022 (<strong>NeurIPS 2022</strong>) <br /
 <div class="spanner"></div>
 </div>
 
-<div class="paper pub-item" id="closer-avs"><img class="paper" src="papers/closer-avs.png" title="A Closer Look at Audio-Visual Semantic Segmentation" />
+<div class="paper" id="closer-avs"><img class="paper" src="papers/closer-avs.png" title="A Closer Look at Audio-Visual Semantic Segmentation" />
 <div> <strong>A Closer Look at Audio-Visual Semantic Segmentation</strong><br />
 Y Chen, Y Liu, <strong>H Wang</strong>, F Liu, C Wang, G Carneiro <br />
 Computer Vision and Pattern Recognition 2023 (<strong>CVPR 2024</strong>) <br />
@@ -653,7 +541,7 @@ Computer Vision and Pattern Recognition 2023 (<strong>CVPR 2024</strong>) <br />
 <div class="spanner"></div>
 </div>
 
-<div class="paper pub-item" id="bomd"><img class="paper" src="papers/bomd.png" title="BoMD: Bag of Multi-label Descriptors for Noisy Chest X-ray Classification" />
+<div class="paper" id="bomd"><img class="paper" src="papers/bomd.png" title="BoMD: Bag of Multi-label Descriptors for Noisy Chest X-ray Classification" />
 <div> <strong>BoMD: Bag of Multi-label Descriptors for Noisy Chest X-ray Classification</strong><br />
 Y Chen, F Liu, <strong>H Wang</strong>, C Wang, Y Tian, Y Liu, G Carneiro <br />
 International Conference on Computer Vision 2023 (<strong>ICCV 2023</strong>) <br />
@@ -662,7 +550,7 @@ International Conference on Computer Vision 2023 (<strong>ICCV 2023</strong>) <b
 <div class="spanner"></div>
 </div>
 	
-<div class="paper pub-item" id="mvccl"><img class="paper" src="papers/mvccl.png" title="Multi-view Local Co-occurrence and Global Consistency Learning Improve Mammogram Classification Generalisation" />
+<div class="paper" id="mvccl"><img class="paper" src="papers/mvccl.png" title="Multi-view Local Co-occurrence and Global Consistency Learning Improve Mammogram Classification Generalisation" />
 <div> <strong>Multi-view Local Co-occurrence and Global Consistency Learning Improve Mammogram Classification Generalisation</strong><br />
 Y Chen, <strong>H Wang</strong>, C Wang, Y Tian, F Liu, Y Liu, M Elliott, D J. McCarthy, H Frazer, G Carneiro <br />
 Medical Image Computing and Computer Assisted Interventions 2022 (<strong>MICCAI 2022</strong>) <br />
@@ -671,7 +559,7 @@ Medical Image Computing and Computer Assisted Interventions 2022 (<strong>MICCAI
 <div class="spanner"></div>
 </div>
 
-<div class="paper pub-item" id="embc2023"><img class="paper" src="papers/embc2023.png" title="The Effectiveness of Self-supervised Pre-training for Multi-modal Endometriosis Classification" />
+<div class="paper" id="embc2023"><img class="paper" src="papers/embc2023.png" title="The Effectiveness of Self-supervised Pre-training for Multi-modal Endometriosis Classification" />
 <div> <strong>The Effectiveness of Self-supervised Pre-training for Multi-modal Endometriosis Classification</strong><br />
 D Butler, <strong>H Wang</strong>, Y Zhang, M To, J Avery, L Hull, G Carneiro <br />
 International Conference of the IEEE Engineering in Medicine and Biology Society 2023 (<strong>EMBC 2023</strong>) <br />
@@ -680,7 +568,7 @@ International Conference of the IEEE Engineering in Medicine and Biology Society
 <div class="spanner"></div>
 </div>
 	
-<div class="paper pub-item" id="distillISBI23"><img class="paper" src="papers/distillISBI23.png" title="Distilling Missing Modality Knowledge from Ultrasound for Endometriosis Diagnosis with Magnetic Resonance Images" />
+<div class="paper" id="distillISBI23"><img class="paper" src="papers/distillISBI23.png" title="Distilling Missing Modality Knowledge from Ultrasound for Endometriosis Diagnosis with Magnetic Resonance Images" />
 <div> <strong>Distilling Missing Modality Knowledge from Ultrasound for Endometriosis Diagnosis with Magnetic Resonance Images</strong><br />
 Y Zhang, <strong>H Wang</strong>, D Butler, M To, J Avery, L Hull, G Carneiro <br />
 International Symposium on Biomedical Imaging 2023 (<strong>ISBI 2023, *Best Oral Paper Award</strong>) <br />
@@ -689,7 +577,7 @@ International Symposium on Biomedical Imaging 2023 (<strong>ISBI 2023, *Best Ora
 <div class="spanner"></div>
 </div>
 	
-<div class="paper pub-item" id="oriole"><img class="paper" src="papers/oriole.png" title="Oriole: Thwarting Privacy against Trustworthy Deep Learning Models" />
+<div class="paper" id="oriole"><img class="paper" src="papers/oriole.png" title="Oriole: Thwarting Privacy against Trustworthy Deep Learning Models" />
 <div> <strong>Oriole: Thwarting Privacy against Trustworthy Deep Learning Models</strong><br />
 L Chen, <strong>H Wang</strong>, B Zi Hao Zhao, M Xue, H Qian <br />
 Information Security and Privacy 2021 (<strong>ACISP 2021</strong>) <br />
@@ -699,7 +587,7 @@ Information Security and Privacy 2021 (<strong>ACISP 2021</strong>) <br />
 <div class="spanner"></div>
 </div>
 
-<div class="paper pub-item" id="weighing_counts"><img class="paper" src="papers/weighing_counts.png" title="Counting Crowd by Weighing Counts: A Sequential Decision-Making Perspective" />
+<div class="paper" id="weighing_counts"><img class="paper" src="papers/weighing_counts.png" title="Counting Crowd by Weighing Counts: A Sequential Decision-Making Perspective" />
 <div> <strong>Counting Crowd by Weighing Counts: A Sequential Decision-Making Perspective</strong><br />
 H Lu, L Liu, <strong>H Wang</strong>, Z Cao <br />
 IEEE Transactions on Neural Networks and Learning Systems (<strong>TNNLS 2022</strong>). <br />
@@ -709,7 +597,7 @@ IEEE Transactions on Neural Networks and Learning Systems (<strong>TNNLS 2022</s
 <div class="spanner"></div>
 </div>
 
-<div class="paper pub-item" id="can"><img class="paper" src="papers/can.png" title="Multi-label thoracic disease image classification with cross-attention networks" />
+<div class="paper" id="can"><img class="paper" src="papers/can.png" title="Multi-label thoracic disease image classification with cross-attention networks" />
 <div> <strong>Multi-label thoracic disease image classification with cross-attention networks</strong><br />
 C Ma, <strong>H Wang</strong>, SCH Hoi <br />
 Medical Image Computing and Computer Assisted Interventions 2019 (<strong>MICCAI 2019</strong>) <br />
@@ -718,7 +606,7 @@ Medical Image Computing and Computer Assisted Interventions 2019 (<strong>MICCAI
 <div class="spanner"></div>
 </div>
 
-<div class="paper pub-item" id="rocp"><img class="paper" src="papers/rocp.png" title="Randomized online CP decomposition" />
+<div class="paper" id="rocp"><img class="paper" src="papers/rocp.png" title="Randomized online CP decomposition" />
 <div> <strong>Randomized online CP decomposition</strong><br />
 C Ma, X Yang, <strong>H Wang</strong> <br />
 International Conference on Advanced Computational Intelligence 2018 (<strong>ICACI 2018</strong>) <br />
@@ -727,7 +615,7 @@ International Conference on Advanced Computational Intelligence 2018 (<strong>IC
 <div class="spanner"></div>
 </div>
 
-<div class="paper pub-item" id="est"><img class="paper" src="papers/est.png" title="A Graphical Programming System" />
+<div class="paper" id="est"><img class="paper" src="papers/est.png" title="A Graphical Programming System" />
 <div> <strong>A Graphical Programming System (comparable to Lego EV3)</strong><br />
 <strong>H Wang</strong>, L Qin, H Liang, Z Wu, Y Pan, H Han <br />
 Patents have been published <br />
@@ -775,11 +663,12 @@ Patents have been published <br />
 </div>
 
 	
-<footer class="footer">© Hu Wang</footer>
+<div style="clear:both;">
+<p align="right"><font robinson research institute size="5">© Hu Wang</font></p>
+</div>
 
 <hr>
 <div id="clustrmaps-widget" class="divcss5"><script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=q2D4EO3oDGncjz25dy8DTDkM51F4O67DWrxP9OTZGDg"></script></div>
 
-</div>
 </body>
 </html>
